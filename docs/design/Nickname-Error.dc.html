@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<title>代號被占用與連線失敗</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;800&display=swap">
+<style>
+body{margin:0}
+.app{--bg:#F3F6F8;--surface:#FFFFFF;--surface2:#E8EEF2;--text:#17212B;--muted:#56626E;--line:#C9D2DA;--accent:#0B7480;--accent-ink:#FFFFFF;--warn:#A8201A;--warn-bg:#FCE9E7;position:relative;overflow:hidden;box-sizing:border-box;background:var(--bg);color:var(--text);font-family:'Noto Sans TC','Noto Sans SC','Noto Sans KR','Noto Sans JP',system-ui,sans-serif;font-size:15px;line-height:1.5}
+.app.dark{--bg:#0E1418;--surface:#172028;--surface2:#212C35;--text:#E6EDF2;--muted:#9AA8B4;--line:#33414D;--accent:#4CC9D4;--accent-ink:#06262A;--warn:#FFB4AB;--warn-bg:#3B1F1D}
+.app *{box-sizing:border-box}
+.app button{font:inherit;color:inherit;cursor:pointer;background:none;border:0;padding:0}
+.app button:focus-visible,.app input:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.app svg{display:block;flex:none}
+.lang{height:44px;padding:0 12px;border-radius:12px;border:1px solid var(--line);background:var(--surface);display:inline-flex;align-items:center;gap:8px;font-weight:500}
+.pbtn{height:52px;width:100%;border-radius:12px;background:var(--accent);color:var(--accent-ink);font-weight:700;font-size:17px;display:flex;align-items:center;justify-content:center}
+.field{width:100%;height:52px;border-radius:12px;border:1.5px solid var(--line);background:var(--surface);color:var(--text);font:inherit;font-size:17px;padding:0 14px}
+.field.bad{border-color:var(--warn)}
+.field::placeholder{color:var(--muted)}
+</style>
+</helmet>
+<div class="app {{theme}}" style="width:390px;height:844px;display:flex;flex-direction:column">
+  <div style="display:flex;justify-content:flex-end;padding:12px 16px">
+    <button class="lang" type="button" aria-label="切換介面語言">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3a14 14 0 0 1 0 18a14 14 0 0 1 0-18z"/></svg>
+      <span>繁體中文</span>
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+    </button>
+  </div>
+
+  <div style="flex:1;display:flex;flex-direction:column;justify-content:center;padding:0 24px 40px">
+    <div style="width:64px;height:64px;border-radius:20px;background:var(--accent);color:var(--accent-ink);display:flex;align-items:center;justify-content:center;margin-bottom:20px">
+      <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12z"/></svg>
+    </div>
+    <h1 style="margin:0 0 8px;font-size:30px;line-height:1.25;font-weight:800">匿名聊天室</h1>
+    <p style="margin:0 0 32px;color:var(--muted);font-size:16px">不用註冊，取一個代號就能加入聊天。</p>
+
+    <label for="nick" style="font-weight:700;margin-bottom:8px">你的代號</label>
+    <input id="nick" class="field bad" type="text" value="小明" aria-invalid="true" aria-describedby="nick-err" />
+    <div style="display:flex;justify-content:space-between;gap:12px;margin-top:8px;font-size:13px">
+      <span id="nick-err" style="color:var(--warn);font-weight:700;display:flex;align-items:center;gap:6px">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 8v5"/><path d="M12 16.5h.01"/></svg>
+        這個代號有人在用了，請換一個。
+      </span>
+      <span style="color:var(--muted)">2 / 12</span>
+    </div>
+    <div style="min-height:28px"></div>
+    <button class="pbtn" type="button">進入聊天室</button>
+
+    <div role="alert" style="margin-top:24px;padding:14px 16px;border-radius:14px;background:var(--warn-bg);color:var(--warn);display:flex;align-items:center;gap:12px">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 8.8a15 15 0 0 1 20 0"/><path d="M5 12.5a10 10 0 0 1 14 0"/><path d="M8.5 16a5 5 0 0 1 7 0"/><path d="M12 19.5h.01"/><path d="m3 3 18 18"/></svg>
+      <div style="flex:1">
+        <div style="font-weight:700">無法連到伺服器</div>
+        <div style="font-size:13px">請檢查網路後再試一次。</div>
+      </div>
+      <button type="button" style="height:44px;padding:0 16px;border-radius:12px;border:1.5px solid currentColor;font-weight:700">重試</button>
+    </div>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"dark":{"editor":"boolean","default":false,"section":"外觀"},"$preview":{"width":390,"height":844}}'>
+class Component extends DCLogic {
+renderVals() {
+return { theme: this.props.dark ? 'dark' : 'light' };
+}
+}
+</script>
+</body>
+</html>

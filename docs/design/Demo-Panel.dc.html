@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<title>示範控制面板</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;800&display=swap">
+<style>
+body{margin:0}
+.app{--bg:#F3F6F8;--surface:#FFFFFF;--surface2:#E8EEF2;--text:#17212B;--muted:#56626E;--line:#C9D2DA;--accent:#0B7480;--accent-ink:#FFFFFF;position:relative;overflow:hidden;box-sizing:border-box;background:var(--bg);color:var(--text);font-family:'Noto Sans TC','Noto Sans SC','Noto Sans KR','Noto Sans JP',system-ui,sans-serif;font-size:15px;line-height:1.5}
+.app.dark{--bg:#0E1418;--surface:#172028;--surface2:#212C35;--text:#E6EDF2;--muted:#9AA8B4;--line:#2E3B47;--accent:#4CC9D4;--accent-ink:#06262A}
+.app *{box-sizing:border-box}
+.app button{font:inherit;color:inherit;cursor:pointer;background:none;border:0;padding:0}
+.app button:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.app svg{display:block;flex:none}
+.act{height:48px;padding:0 14px;border-radius:12px;border:1.5px solid var(--line);background:var(--surface);font-weight:600;text-align:left;display:flex;align-items:center;justify-content:space-between;gap:8px}
+.grp{font-size:12px;font-weight:700;color:var(--muted);letter-spacing:.04em;margin:4px 0 -2px}
+</style>
+</helmet>
+<div class="app {{theme}}" style="width:360px;height:440px;padding:16px;display:flex;flex-direction:column;gap:10px">
+  <div style="display:flex;align-items:center;justify-content:space-between;gap:8px">
+    <h2 style="margin:0;font-size:18px;font-weight:800">示範控制面板</h2>
+    <span style="padding:2px 10px;border-radius:999px;background:var(--accent);color:var(--accent-ink);font-size:12px;font-weight:700">僅示範模式</span>
+  </div>
+
+  <div class="grp">連線</div>
+  <div style="display:flex;gap:10px">
+    <button type="button" class="act" style="flex:1">模擬斷線</button>
+    <button type="button" class="act" style="flex:1">恢復連線</button>
+  </div>
+
+  <div class="grp">觸發提示</div>
+  <button type="button" class="act">模擬檔案太大 <span style="color:var(--muted);font-size:13px;font-weight:500">超過 5 MB</span></button>
+  <button type="button" class="act">模擬代號被占用</button>
+  <button type="button" class="act">模擬送太快</button>
+
+  <div class="grp">假的聊天對象</div>
+  <div style="height:48px;padding:0 14px;border-radius:12px;border:1.5px solid var(--line);background:var(--surface);display:flex;align-items:center;justify-content:space-between;gap:8px">
+    <span style="font-weight:600">自動說話、進來與離開</span>
+    <button type="button" role="switch" aria-checked="true" aria-label="假的聊天對象自動活動" style="width:52px;height:32px;border-radius:16px;background:var(--accent);position:relative">
+      <span style="position:absolute;top:3px;right:3px;width:26px;height:26px;border-radius:50%;background:var(--accent-ink)"></span>
+    </button>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"dark":{"editor":"boolean","default":false,"section":"外觀"},"$preview":{"width":360,"height":440}}'>
+class Component extends DCLogic {
+renderVals() {
+return { theme: this.props.dark ? 'dark' : 'light' };
+}
+}
+</script>
+</body>
+</html>

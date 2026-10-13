@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<title>收回確認</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;800&display=swap">
+<style>
+body{margin:0}
+.app{--bg:#F3F6F8;--surface:#FFFFFF;--surface2:#E8EEF2;--text:#17212B;--muted:#56626E;--line:#C9D2DA;--accent:#0B7480;--accent-ink:#FFFFFF;--mine:#0B7480;--mine-ink:#FFFFFF;--warn:#A8201A;--warn-ink:#FFFFFF;--c2:#8A5A00;--c4:#1F5FBF;position:relative;overflow:hidden;box-sizing:border-box;background:var(--bg);color:var(--text);font-family:'Noto Sans TC','Noto Sans SC','Noto Sans KR','Noto Sans JP',system-ui,sans-serif;font-size:15px;line-height:1.5}
+.app.dark{--bg:#0E1418;--surface:#172028;--surface2:#212C35;--text:#E6EDF2;--muted:#9AA8B4;--line:#2E3B47;--accent:#4CC9D4;--accent-ink:#06262A;--mine:#116069;--mine-ink:#FFFFFF;--warn:#FFB4AB;--warn-ink:#3B1F1D;--c2:#F2B94B;--c4:#7CAEFF}
+.app *{box-sizing:border-box}
+.app button{font:inherit;color:inherit;cursor:pointer;background:none;border:0;padding:0}
+.app button:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.app svg{display:block;flex:none}
+.c2{color:var(--c2)}.c4{color:var(--c4)}
+.row{display:flex;flex-direction:column;max-width:84%}
+.row.other{align-self:flex-start;align-items:flex-start}
+.row.mine{align-self:flex-end;align-items:flex-end}
+.meta{display:flex;gap:8px;align-items:baseline;font-size:13px;margin:0 4px 3px}
+.name{font-weight:700}
+.time{color:var(--muted);font-size:12px}
+.bubble{padding:10px 14px;border-radius:18px;background:var(--surface);border:1px solid var(--line);overflow-wrap:anywhere}
+.row.other .bubble{border-top-left-radius:6px}
+.row.mine .bubble{background:var(--mine);color:var(--mine-ink);border-color:transparent;border-bottom-right-radius:6px}
+.dbtn{height:48px;flex:1;border-radius:12px;font-weight:700;font-size:16px}
+</style>
+</helmet>
+<div class="app {{theme}}" style="width:390px;height:844px;display:flex;flex-direction:column">
+  <div style="height:28px;display:flex;align-items:center;justify-content:center;background:var(--surface2);color:var(--muted);font-size:12px">示範模式・對話對象為模擬</div>
+  <div style="height:64px;display:flex;align-items:center;padding:0 16px;background:var(--surface);border-bottom:1px solid var(--line);font-weight:800">線上 4 人</div>
+  <div style="flex:1;min-height:0;overflow:hidden;display:flex;flex-direction:column;justify-content:flex-end;gap:12px;padding:16px">
+    <div class="row other">
+      <div class="meta"><span class="name c4">小華</span><span class="time">14:40</span></div>
+      <div class="bubble">我先去吃飯，晚點回來聊。</div>
+    </div>
+    <div class="row mine">
+      <div class="meta"><span class="time">14:41</span><span class="name c2">阿森</span></div>
+      <div class="bubble">好喔，慢慢吃。</div>
+    </div>
+  </div>
+
+  <div style="position:absolute;left:0;right:0;top:0;bottom:0;background:rgba(8,14,20,.55)" aria-hidden="true"></div>
+  <div role="alertdialog" aria-modal="true" aria-labelledby="dlg-title" aria-describedby="dlg-body" style="position:absolute;left:24px;right:24px;top:50%;transform:translateY(-50%);padding:24px 20px 20px;border-radius:20px;background:var(--surface);border:1px solid var(--line);box-shadow:0 20px 50px rgba(8,14,20,.4)">
+    <h2 id="dlg-title" style="margin:0 0 8px;font-size:20px;line-height:1.3;font-weight:800">收回這則訊息？</h2>
+    <p id="dlg-body" style="margin:0 0 20px;color:var(--muted)">收回後，所有人只會看到「已收回」，原本的內容無法復原。</p>
+    <div style="display:flex;gap:12px">
+      <button type="button" class="dbtn" style="border:1.5px solid var(--line);background:var(--surface)">取消</button>
+      <button type="button" class="dbtn" style="background:var(--warn);color:var(--warn-ink)">收回</button>
+    </div>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"dark":{"editor":"boolean","default":false,"section":"外觀"},"$preview":{"width":390,"height":844}}'>
+class Component extends DCLogic {
+renderVals() {
+return { theme: this.props.dark ? 'dark' : 'light' };
+}
+}
+</script>
+</body>
+</html>

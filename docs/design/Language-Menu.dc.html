@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<title>語言選單展開</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;800&display=swap">
+<style>
+body{margin:0}
+.app{--bg:#F3F6F8;--surface:#FFFFFF;--surface2:#E8EEF2;--text:#17212B;--muted:#56626E;--line:#C9D2DA;--accent:#0B7480;--accent-ink:#FFFFFF;position:relative;overflow:hidden;box-sizing:border-box;background:var(--bg);color:var(--text);font-family:'Noto Sans TC','Noto Sans SC','Noto Sans KR','Noto Sans JP',system-ui,sans-serif;font-size:15px;line-height:1.5}
+.app.dark{--bg:#0E1418;--surface:#172028;--surface2:#212C35;--text:#E6EDF2;--muted:#9AA8B4;--line:#33414D;--accent:#4CC9D4;--accent-ink:#06262A}
+.app *{box-sizing:border-box}
+.app button{font:inherit;color:inherit;cursor:pointer;background:none;border:0;padding:0}
+.app button:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.app svg{display:block;flex:none}
+.lang{height:44px;padding:0 12px;border-radius:12px;border:1px solid var(--accent);background:var(--surface);display:inline-flex;align-items:center;gap:8px;font-weight:500}
+.opt{width:100%;height:48px;padding:0 16px;display:flex;align-items:center;justify-content:space-between;text-align:left;font-size:16px}
+.opt.on{background:var(--surface2);font-weight:700}
+</style>
+</helmet>
+<div class="app {{theme}}" style="width:390px;height:360px">
+  <div style="display:flex;justify-content:flex-end;padding:12px 16px">
+    <button class="lang" type="button" aria-haspopup="listbox" aria-expanded="true" aria-label="切換介面語言">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3a14 14 0 0 1 0 18a14 14 0 0 1 0-18z"/></svg>
+      <span>繁體中文</span>
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m18 15-6-6-6 6"/></svg>
+    </button>
+  </div>
+  <div role="listbox" aria-label="介面語言" style="position:absolute;top:60px;right:16px;width:220px;padding:6px 0;border-radius:14px;background:var(--surface);border:1px solid var(--line);box-shadow:0 12px 32px rgba(10,20,30,.18)">
+    <button class="opt on" type="button" role="option" aria-selected="true"><span lang="zh-Hant">繁體中文</span>
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5 9-10"/></svg>
+    </button>
+    <button class="opt" type="button" role="option" aria-selected="false"><span lang="zh-Hans">简体中文</span></button>
+    <button class="opt" type="button" role="option" aria-selected="false"><span lang="en">English</span></button>
+    <button class="opt" type="button" role="option" aria-selected="false"><span lang="ko">한국어</span></button>
+    <button class="opt" type="button" role="option" aria-selected="false"><span lang="ja">日本語</span></button>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"dark":{"editor":"boolean","default":false,"section":"外觀"},"$preview":{"width":390,"height":360}}'>
+class Component extends DCLogic {
+renderVals() {
+return { theme: this.props.dark ? 'dark' : 'light' };
+}
+}
+</script>
+</body>
+</html>
