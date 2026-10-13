@@ -1,0 +1,82 @@
+{
+  "app": { "title": "익명 채팅방", "demoBar": "데모 모드・대화 상대는 가상입니다" },
+  "lang": { "label": "언어 변경", "listLabel": "언어" },
+  "nick": {
+    "subtitle": "가입 없이 닉네임만 정하면 바로 채팅에 참여할 수 있어요.",
+    "label": "내 닉네임",
+    "placeholder": "1~12자",
+    "hint": "닉네임은 이 브라우저에 영구적으로 연결되며 다른 사람은 쓸 수 없어요.",
+    "enter": "채팅방 입장",
+    "entering": "등록 중…",
+    "taken": "이미 사용 중인 닉네임이에요. 다른 닉네임을 입력해 주세요.",
+    "empty": "닉네임을 입력해 주세요.",
+    "tooLong": "닉네임은 최대 {{max}}자까지 가능해요.",
+    "badChar": "닉네임에는 줄바꿈이나 보이지 않는 문자를 쓸 수 없어요.",
+    "connFailed": "서버에 연결할 수 없어요",
+    "connFailedHint": "네트워크를 확인한 뒤 다시 시도해 주세요.",
+    "retry": "다시 시도"
+  },
+  "chat": {
+    "online": "접속 중 {{count}}명",
+    "you": " (나)",
+    "expandOnline": "접속자 목록 펼치기",
+    "collapseOnline": "접속자 목록 접기",
+    "closeOnline": "목록 닫기",
+    "onlineList": "접속자 목록",
+    "joined": "{{name}}님이 입장했어요",
+    "left": "{{name}}님이 나갔어요",
+    "recalledNotice": "{{name}}님이 메시지를 회수했어요",
+    "recall": "회수",
+    "newMessages": "새 메시지 {{count}}개",
+    "typing": "{{names}}님이 입력 중…",
+    "typingMany": "여러 명이 입력 중…",
+    "typingSeparator": ", ",
+    "connectionLost": "연결이 끊어졌어요. 다시 연결하는 중…",
+    "loading": "이전 메시지를 불러오는 중…",
+    "emptyTitle": "아직 아무도 말하지 않았어요",
+    "emptySub": "먼저 인사해 보세요!",
+    "enterKeys": "Enter 전송・Shift + Enter 줄바꿈"
+  },
+  "composer": {
+    "placeholder": "메시지 입력…",
+    "label": "메시지 내용",
+    "attach": "이미지 또는 파일 첨부",
+    "send": "메시지 보내기",
+    "rateLimited": "너무 빨리 보내고 있어요. 잠시만 기다려 주세요.",
+    "tooLarge": "파일이 너무 커요. 최대 {{max}}MB까지 가능해요.",
+    "tooLong": "메시지는 최대 {{max}}자까지 가능해요.",
+    "failed": "전송하지 못했어요. 다시 시도해 주세요.",
+    "offline": "연결이 끊어졌어요. 다시 연결되면 보낼 수 있어요."
+  },
+  "file": {
+    "download": "{{name}} 다운로드",
+    "imageOpen": "이미지 크게 보기",
+    "imageHint": "이미지・눌러서 크게 보기",
+    "imageAlt": "이미지: {{name}}",
+    "unavailable": "파일을 표시할 수 없어요"
+  },
+  "viewer": { "label": "이미지 크게 보기", "close": "닫기", "download": "원본 다운로드 ({{size}})" },
+  "recallDialog": {
+    "title": "이 메시지를 회수할까요?",
+    "body": "회수하면 모든 사람에게 '회수됨'으로만 보이고, 원래 내용은 복구할 수 없어요.",
+    "cancel": "취소",
+    "confirm": "회수"
+  },
+  "errors": { "recallFailed": "회수하지 못했어요. 다시 시도해 주세요." },
+  "demo": {
+    "toggle": "데모 패널",
+    "title": "데모 제어판",
+    "badge": "데모 모드 전용",
+    "close": "닫기",
+    "groupConn": "연결",
+    "disconnect": "연결 끊김 시뮬레이션",
+    "reconnect": "연결 복구",
+    "groupTrigger": "안내 표시 테스트",
+    "tooLarge": "파일 너무 큼 시뮬레이션",
+    "tooLargeNote": "{{max}}MB 초과",
+    "taken": "닉네임 중복 시뮬레이션",
+    "rate": "너무 빠른 전송 시뮬레이션",
+    "groupBots": "가상의 대화 상대",
+    "botsSwitch": "자동으로 말하고 입장·퇴장"
+  }
+}

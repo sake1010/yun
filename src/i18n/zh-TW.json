@@ -1,0 +1,82 @@
+{
+  "app": { "title": "匿名聊天室", "demoBar": "示範模式・對話對象為模擬" },
+  "lang": { "label": "切換介面語言", "listLabel": "介面語言" },
+  "nick": {
+    "subtitle": "不用註冊，取一個代號就能加入聊天。",
+    "label": "你的代號",
+    "placeholder": "1 到 12 個字",
+    "hint": "代號永久屬於這個瀏覽器，別人不能用。",
+    "enter": "進入聊天室",
+    "entering": "登記中…",
+    "taken": "這個代號有人在用了，請換一個。",
+    "empty": "請輸入代號。",
+    "tooLong": "代號最多 {{max}} 個字。",
+    "badChar": "代號不能包含換行或看不見的字元。",
+    "connFailed": "無法連到伺服器",
+    "connFailedHint": "請檢查網路後再試一次。",
+    "retry": "重試"
+  },
+  "chat": {
+    "online": "線上 {{count}} 人",
+    "you": "（你）",
+    "expandOnline": "展開線上名單",
+    "collapseOnline": "收合線上名單",
+    "closeOnline": "關閉名單",
+    "onlineList": "線上名單",
+    "joined": "{{name}} 進來了",
+    "left": "{{name}} 離開了",
+    "recalledNotice": "{{name}} 收回了一則訊息",
+    "recall": "收回",
+    "newMessages": "有 {{count}} 則新訊息",
+    "typing": "{{names}} 正在輸入…",
+    "typingMany": "有多人正在輸入…",
+    "typingSeparator": "、",
+    "connectionLost": "連線中斷，重新連線中…",
+    "loading": "正在載入歷史訊息…",
+    "emptyTitle": "還沒有人說話",
+    "emptySub": "來打個招呼吧！",
+    "enterKeys": "Enter 送出・Shift + Enter 換行"
+  },
+  "composer": {
+    "placeholder": "輸入訊息…",
+    "label": "訊息內容",
+    "attach": "附加圖片或檔案",
+    "send": "送出訊息",
+    "rateLimited": "送太快了，請稍等",
+    "tooLarge": "檔案太大，上限 {{max}} MB",
+    "tooLong": "訊息最長 {{max}} 字",
+    "failed": "送出失敗，請再試一次",
+    "offline": "目前沒有連線，連上後才能送出"
+  },
+  "file": {
+    "download": "下載 {{name}}",
+    "imageOpen": "放大圖片",
+    "imageHint": "圖片・點一下放大",
+    "imageAlt": "圖片：{{name}}",
+    "unavailable": "檔案無法顯示"
+  },
+  "viewer": { "label": "圖片放大檢視", "close": "關閉", "download": "下載原圖（{{size}}）" },
+  "recallDialog": {
+    "title": "收回這則訊息？",
+    "body": "收回後，所有人只會看到「已收回」，原本的內容無法復原。",
+    "cancel": "取消",
+    "confirm": "收回"
+  },
+  "errors": { "recallFailed": "收回失敗，請再試一次" },
+  "demo": {
+    "toggle": "示範面板",
+    "title": "示範控制面板",
+    "badge": "僅示範模式",
+    "close": "關閉",
+    "groupConn": "連線",
+    "disconnect": "模擬斷線",
+    "reconnect": "恢復連線",
+    "groupTrigger": "觸發提示",
+    "tooLarge": "模擬檔案太大",
+    "tooLargeNote": "超過 {{max}} MB",
+    "taken": "模擬代號被占用",
+    "rate": "模擬送太快",
+    "groupBots": "假的聊天對象",
+    "botsSwitch": "自動說話、進來與離開"
+  }
+}

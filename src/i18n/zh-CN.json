@@ -1,0 +1,82 @@
+{
+  "app": { "title": "匿名聊天室", "demoBar": "演示模式・聊天对象为模拟" },
+  "lang": { "label": "切换界面语言", "listLabel": "界面语言" },
+  "nick": {
+    "subtitle": "无需注册，取一个代号就能加入聊天。",
+    "label": "你的代号",
+    "placeholder": "1 到 12 个字",
+    "hint": "代号永久属于这个浏览器，别人不能使用。",
+    "enter": "进入聊天室",
+    "entering": "登记中…",
+    "taken": "这个代号已有人使用，请换一个。",
+    "empty": "请输入代号。",
+    "tooLong": "代号最多 {{max}} 个字。",
+    "badChar": "代号不能包含换行或不可见字符。",
+    "connFailed": "无法连接到服务器",
+    "connFailedHint": "请检查网络后再试一次。",
+    "retry": "重试"
+  },
+  "chat": {
+    "online": "在线 {{count}} 人",
+    "you": "（你）",
+    "expandOnline": "展开在线名单",
+    "collapseOnline": "收起在线名单",
+    "closeOnline": "关闭名单",
+    "onlineList": "在线名单",
+    "joined": "{{name}} 进来了",
+    "left": "{{name}} 离开了",
+    "recalledNotice": "{{name}} 撤回了一条消息",
+    "recall": "撤回",
+    "newMessages": "有 {{count}} 条新消息",
+    "typing": "{{names}} 正在输入…",
+    "typingMany": "多人正在输入…",
+    "typingSeparator": "、",
+    "connectionLost": "连接中断，正在重新连接…",
+    "loading": "正在加载历史消息…",
+    "emptyTitle": "还没有人说话",
+    "emptySub": "来打个招呼吧！",
+    "enterKeys": "Enter 发送・Shift + Enter 换行"
+  },
+  "composer": {
+    "placeholder": "输入消息…",
+    "label": "消息内容",
+    "attach": "添加图片或文件",
+    "send": "发送消息",
+    "rateLimited": "发送太快了，请稍等",
+    "tooLarge": "文件太大，上限 {{max}} MB",
+    "tooLong": "消息最长 {{max}} 字",
+    "failed": "发送失败，请再试一次",
+    "offline": "当前没有连接，连上后才能发送"
+  },
+  "file": {
+    "download": "下载 {{name}}",
+    "imageOpen": "放大图片",
+    "imageHint": "图片・点一下放大",
+    "imageAlt": "图片：{{name}}",
+    "unavailable": "文件无法显示"
+  },
+  "viewer": { "label": "图片放大查看", "close": "关闭", "download": "下载原图（{{size}}）" },
+  "recallDialog": {
+    "title": "撤回这条消息？",
+    "body": "撤回后，所有人只会看到“已撤回”，原来的内容无法恢复。",
+    "cancel": "取消",
+    "confirm": "撤回"
+  },
+  "errors": { "recallFailed": "撤回失败，请再试一次" },
+  "demo": {
+    "toggle": "演示面板",
+    "title": "演示控制面板",
+    "badge": "仅演示模式",
+    "close": "关闭",
+    "groupConn": "连接",
+    "disconnect": "模拟断线",
+    "reconnect": "恢复连接",
+    "groupTrigger": "触发提示",
+    "tooLarge": "模拟文件太大",
+    "tooLargeNote": "超过 {{max}} MB",
+    "taken": "模拟代号被占用",
+    "rate": "模拟发送太快",
+    "groupBots": "模拟的聊天对象",
+    "botsSwitch": "自动说话、进来与离开"
+  }
+}

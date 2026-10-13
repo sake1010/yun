@@ -1,0 +1,82 @@
+{
+  "app": { "title": "匿名チャット", "demoBar": "デモモード・会話の相手は擬似です" },
+  "lang": { "label": "表示言語を切り替える", "listLabel": "表示言語" },
+  "nick": {
+    "subtitle": "登録不要。ニックネームを決めるだけで参加できます。",
+    "label": "ニックネーム",
+    "placeholder": "1〜12文字",
+    "hint": "ニックネームはこのブラウザに永久に紐づき、他の人は使えません。",
+    "enter": "チャットに入る",
+    "entering": "登録中…",
+    "taken": "このニックネームはすでに使われています。別のものにしてください。",
+    "empty": "ニックネームを入力してください。",
+    "tooLong": "ニックネームは{{max}}文字までです。",
+    "badChar": "ニックネームに改行や見えない文字は使えません。",
+    "connFailed": "サーバーに接続できません",
+    "connFailedHint": "ネットワークを確認して、もう一度お試しください。",
+    "retry": "再試行"
+  },
+  "chat": {
+    "online": "オンライン {{count}}人",
+    "you": "（あなた）",
+    "expandOnline": "オンライン一覧を開く",
+    "collapseOnline": "オンライン一覧を閉じる",
+    "closeOnline": "一覧を閉じる",
+    "onlineList": "オンライン一覧",
+    "joined": "{{name}}さんが入室しました",
+    "left": "{{name}}さんが退室しました",
+    "recalledNotice": "{{name}}さんがメッセージを取り消しました",
+    "recall": "取り消す",
+    "newMessages": "新着メッセージ {{count}}件",
+    "typing": "{{names}}さんが入力中…",
+    "typingMany": "複数の人が入力中…",
+    "typingSeparator": "、",
+    "connectionLost": "接続が切れました。再接続しています…",
+    "loading": "過去のメッセージを読み込み中…",
+    "emptyTitle": "まだ誰も話していません",
+    "emptySub": "最初のあいさつをどうぞ！",
+    "enterKeys": "Enterで送信・Shift + Enterで改行"
+  },
+  "composer": {
+    "placeholder": "メッセージを入力…",
+    "label": "メッセージ",
+    "attach": "画像またはファイルを添付",
+    "send": "メッセージを送信",
+    "rateLimited": "送信が早すぎます。少しお待ちください。",
+    "tooLarge": "ファイルが大きすぎます。上限は{{max}}MBです。",
+    "tooLong": "メッセージは{{max}}文字までです。",
+    "failed": "送信できませんでした。もう一度お試しください。",
+    "offline": "接続が切れています。再接続すると送信できます。"
+  },
+  "file": {
+    "download": "{{name}}をダウンロード",
+    "imageOpen": "画像を拡大",
+    "imageHint": "画像・タップで拡大",
+    "imageAlt": "画像：{{name}}",
+    "unavailable": "ファイルを表示できません"
+  },
+  "viewer": { "label": "画像の拡大表示", "close": "閉じる", "download": "元の画像をダウンロード（{{size}}）" },
+  "recallDialog": {
+    "title": "このメッセージを取り消しますか？",
+    "body": "取り消すと、全員に「取り消されました」とだけ表示され、元の内容は戻せません。",
+    "cancel": "キャンセル",
+    "confirm": "取り消す"
+  },
+  "errors": { "recallFailed": "取り消せませんでした。もう一度お試しください。" },
+  "demo": {
+    "toggle": "デモパネル",
+    "title": "デモ操作パネル",
+    "badge": "デモモード専用",
+    "close": "閉じる",
+    "groupConn": "接続",
+    "disconnect": "切断をシミュレート",
+    "reconnect": "再接続",
+    "groupTrigger": "通知の確認",
+    "tooLarge": "ファイル過大をシミュレート",
+    "tooLargeNote": "{{max}}MB超",
+    "taken": "名前の重複をシミュレート",
+    "rate": "送信が早すぎる状態をシミュレート",
+    "groupBots": "擬似の会話相手",
+    "botsSwitch": "自動で発言・入退室する"
+  }
+}

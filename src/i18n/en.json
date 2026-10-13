@@ -1,0 +1,82 @@
+{
+  "app": { "title": "Anonymous Chat", "demoBar": "Demo mode · other people are simulated" },
+  "lang": { "label": "Change language", "listLabel": "Language" },
+  "nick": {
+    "subtitle": "No sign-up. Pick a nickname and join the chat.",
+    "label": "Your nickname",
+    "placeholder": "1 to 12 characters",
+    "hint": "A nickname stays with this browser for good. No one else can use it.",
+    "enter": "Join chat",
+    "entering": "Saving…",
+    "taken": "That nickname is already taken. Please pick another.",
+    "empty": "Please enter a nickname.",
+    "tooLong": "Nicknames can be at most {{max}} characters.",
+    "badChar": "Nicknames can't contain line breaks or invisible characters.",
+    "connFailed": "Can't reach the server",
+    "connFailedHint": "Check your connection and try again.",
+    "retry": "Retry"
+  },
+  "chat": {
+    "online": "{{count}} online",
+    "you": " (you)",
+    "expandOnline": "Show who's online",
+    "collapseOnline": "Hide who's online",
+    "closeOnline": "Close list",
+    "onlineList": "Who's online",
+    "joined": "{{name}} joined",
+    "left": "{{name}} left",
+    "recalledNotice": "{{name}} recalled a message",
+    "recall": "Recall",
+    "newMessages": "{{count}} new messages",
+    "typing": "{{names}} typing…",
+    "typingMany": "Several people are typing…",
+    "typingSeparator": ", ",
+    "connectionLost": "Connection lost. Reconnecting…",
+    "loading": "Loading earlier messages…",
+    "emptyTitle": "No one has spoken yet",
+    "emptySub": "Say hello!",
+    "enterKeys": "Enter to send · Shift + Enter for a new line"
+  },
+  "composer": {
+    "placeholder": "Type a message…",
+    "label": "Message",
+    "attach": "Attach an image or file",
+    "send": "Send message",
+    "rateLimited": "You're sending too fast. Please wait a moment.",
+    "tooLarge": "File too large. The limit is {{max}} MB.",
+    "tooLong": "Messages can be at most {{max}} characters.",
+    "failed": "Couldn't send. Please try again.",
+    "offline": "You're offline. You can send once you reconnect."
+  },
+  "file": {
+    "download": "Download {{name}}",
+    "imageOpen": "Enlarge image",
+    "imageHint": "Image · tap to enlarge",
+    "imageAlt": "Image: {{name}}",
+    "unavailable": "File unavailable"
+  },
+  "viewer": { "label": "Image viewer", "close": "Close", "download": "Download original ({{size}})" },
+  "recallDialog": {
+    "title": "Recall this message?",
+    "body": "Everyone will see \"recalled\" instead. The original content can't be restored.",
+    "cancel": "Cancel",
+    "confirm": "Recall"
+  },
+  "errors": { "recallFailed": "Couldn't recall. Please try again." },
+  "demo": {
+    "toggle": "Demo panel",
+    "title": "Demo controls",
+    "badge": "Demo mode only",
+    "close": "Close",
+    "groupConn": "Connection",
+    "disconnect": "Simulate disconnect",
+    "reconnect": "Reconnect",
+    "groupTrigger": "Trigger messages",
+    "tooLarge": "Simulate file too large",
+    "tooLargeNote": "over {{max}} MB",
+    "taken": "Simulate nickname taken",
+    "rate": "Simulate sending too fast",
+    "groupBots": "Simulated people",
+    "botsSwitch": "Chat, join and leave automatically"
+  }
+}
